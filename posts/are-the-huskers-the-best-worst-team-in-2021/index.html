@@ -258,11 +258,9 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="index_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>I took a look at the point differential, and I mutated a new column to add a point differential metric for each game in my data. Once I had my point differential metric, I calculated each team’s point differential total for the season using the summarize function. I then joined that data set with my other data set that has a strength of schedule metric for each team. Once I had my new data set, I filtered out all teams that did not finish with three wins so that I could compare Nebraska against the other three-win teams of the 2021 season.</p>
-<p>Now that I have just the three-win teams, I decided to calculate a residual to see what teams are performing better or worse than expected. I used the total point differential for each team that I just calculated as well as strength of schedule rating to create a residual. The blue line in this graph represents the predicted value, and the distance each team is from thee blue line is their residual. The further above the line a team is, the better they performed above expectations, and vice-versa.</p>
-<p>Nebraska had the biggest residual by far of all teams that finished with three wins this past season. We led all three-win teams in both total point differential and strength of schedule rating by a significant margin, and we performed far above our expected output. We are sort of in a league of our own when compared to the other three-win teams. The interesting thing I found with this graph is that the predicted line has a positive slope, and it really shouldn’t. Total point differential shouldn’t increase as strength of schedule gets harder. It doesn’t make sense, until you factor in Nebraska’s unprecedented performance. While creating this residual graph, I tried running it without Nebraska and the predicted line had a negative slope like you’d expect. The reason this line is positive is because of Nebraska. Our performance was so strong this season despite our three-wins that we literally flipped this line positive.</p>
-<p>Nebraska was the only three-win team to finish with a positive point differential last season. It’s crazy to think about, especially when you factor in that we had one of the toughest schedules to play in all of college football. We lost so many games by so few points, so I wanted to see how that point differential progressed throughout the season.</p>
-<p>To do this, I joined two of my datasets together and calculated each team’s cumulative sum of point differential after each game. Once again, I filtered for the three win teams so that I could see how we performed against the teams that finished with the same record as us. Once I had my new data set, I created a step chart to see how these point differentials changed throughout the season.</p>
+<p>I took a look at the Strength of Schedule, and I filtered the three-win teams. Once I had that I created a beeswarm plot to show that nebrasksa faced way tougher opponents than the other three-win teams.</p>
+<p>We are sort of in a league of our own when compared to the other three-win teams. Our performance was so strong this season despite our three-wins that our schedule doesn’t even compare to theirs.</p>
+<p>It’s crazy to think about, especially when you factor in that we had one of the toughest schedules to play in all of college football. We lost so many games by so few points.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -295,8 +293,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="index_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>This graph does a good job of illustrating just how close we were in every game we lost this season. You can see the big positive jumps in the games like Northwestern, and you can really see how little it drops for every loss. We were in every game we played this season, and we really don’t belong in this three-win category.</p>
-<p>Finally, I wanted to see how Nebraska and the other three-win teams compared to the rest of the NCAA. I wanted to take a look at each team’s expected win differential, so I created a metric that subtracted each team’s total wins from their expected number of wins going into the season. Once I had this, I created a bubble chart that compared each team’s strength of schedule rating against their simple rating score, and I made the size of each team’s bubble their win differential.</p>
+<p>This graph does a good job of illustrating just how close we were in every game we lost this season. You can see the difference of ratings in the games like Northwestern. We were in every game we played this season, and we really don’t belong in this three-win category.</p>
+<p>Finally, I wanted to see how Nebraska and the other three-win teams compared to the rest of the NCAA. I wanted to take a look at each team’s expected win differential, so I created a metric that looked at each team’s total wins from their expected number of wins going into the season.</p>
 <div class="cell">
 <details>
 <summary>Code</summary>
@@ -340,7 +338,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p><img src="index_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-<p>As you can see, Nebraska had one of the largest win differential margins in all of college football. Also, despite us having the toughest strength of schedule rating out of all three win teams, we still had the largest simple rating score by far. We played tough teams all season, and we played all those teams tough.</p>
+<p>As you can see, Nebraska was the only team expected to win more games out of all the three win teams. We played tough teams all season, and we played all those teams tough.</p>
 <p>With all the statistics and graphs shown in my website, it’s easy to see that Nebraska does not belong in this three-win category. The data shows that this team is capable of a lot more and should expect a lot more going into next season.</p>
 
 
